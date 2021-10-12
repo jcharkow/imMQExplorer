@@ -47,7 +47,19 @@ Some possible analyses are included below:
 		`python computePIF.py 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768.d UntargetedFeatureWindowMapping.pkl UntargetedPifComputations.pkl`
 
 
+6. Perform Post-Acqusition Extraction of high quality TOF pushes
+	- We found that this does not have a huge impact on identifications. The scripts are here to see our methodology. 
+	1. Fetch MS2 scans from the .d file and merge (Control File)
+		`python fetchMS2Scans.py 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768.d MS2-Frames.mzML`
+		`python mergeMS2Scans.py 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768.d MS2-Frames.mzML MS2-Frames-Merged.mzML`
+	2. Fetch (Based on post acquisition extraction) and merge
+		`python fetchMS2ScansExtract.py 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768.d MS2-Frames-Extract.mzML pifComputationsTopScans.tsv 13`
+		`python mergeMS2Scans.py 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768.d MS2-Frames.mzML MS2-Frames-Merged-Extract.mzML`
+
+
 Furthermore python scripts can be called directly in the imMQExplorer python functions
 
 
+
 If used please cite the following manuscript:
+`Charkow and Rost, “Trapped Ion Mobility Spectrometry Reduces Spectral Complexity in Mass Spectrometry Based Workflow.”`
