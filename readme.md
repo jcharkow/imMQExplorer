@@ -8,7 +8,7 @@ Some possible analyses are included below:
 	- With IM
 	`python featureDensity.py allPeptides.txt True mzrtim_ovlps.npy --rawFile 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768`
 	- No IM
-	`python featureDensity.py allPeptides.txt True mzrtim_ovlps.npy --rawFile 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768`
+	`python featureDensity.py allPeptides.txt False mzrt_ovlps.npy --rawFile 20180819_TIMS2_12-2_AnBr_SA_200ng_HeLa_50cm_120min_100ms_11CT_2_A1_01_2768`
 
 2. Compute overlaps between isolation windows and peptide features
 	- With IM
@@ -62,4 +62,4 @@ Furthermore python scripts can be called directly in the imMQExplorer python fun
 
 
 If used please cite the following manuscript:
-`Charkow and Rost, “Trapped Ion Mobility Spectrometry Reduces Spectral Complexity in Mass Spectrometry Based Workflow.”`
+`Charkow and Rost, “Trapped Ion Mobility Spectrometry Reduces Spectral Complexity in Mass Spectrometry Based Workflow. doi:https://doi.org/10.1021/acs.analchem.1c01399”`
